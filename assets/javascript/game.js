@@ -25,7 +25,7 @@ var letterGuessedText = document.getElementById("letters-already-guessed");
 
 // variable sets empty string
 var generateLines = ''
-var rightWord = ''
+
 
 // function that generates underscores
 
@@ -35,10 +35,13 @@ function underscoreGenerator () {
     } return generateLines;
 }
 
+
+
 // creates underscores on html page 
 guessingLines.textContent = underscoreGenerator()
 
 
+// function to update with guesses 
 
  // This function is run whenever the user presses a key.
  document.onkeyup = function(event) {
@@ -46,11 +49,17 @@ guessingLines.textContent = underscoreGenerator()
 
 // makes variable for 
 // Determines which key was pressed.
- var userLetter = String.fromCharCode(event.key);
+var userLetter = event.key;
+
 
  for(let i=0; i<chosenArtist.length; i++){
-     if(userLetter === i){
-rightWord += userLetter
+  if(chosenArtist[i] === userLetter){
+      guessingLines.textContent = guessingLines.textContent.replace('_', chosenArtist[i]);
+  }else{
+  }
      }
+
  }
-}
+
+
+   
