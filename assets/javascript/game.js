@@ -60,8 +60,8 @@ for (let i = 0; i < chosenArtist.length; i ++){
 if(letterInWord) {
     for(let i = 0;i < chosenArtist.length; i++){
         if(chosenArtist[i]===letter){
-            output[i] === letter;
-            console.log(output);
+            output[i] = letter;
+            console.log(output)
         }
     }
 }else{
