@@ -71,7 +71,18 @@ if(letterInWord) {
 }
 
 
+var guessingLines = document.getElementById("guessing-lines")
+guessingLines.textContent = output.join(" ")
+
+var numGuessRemain = document.getElementById("number-guess-remain")
+numGuessRemain.textContent = "Number of guesses remaining: " + remainingGuesses
+
+var lettersGuessed = document.getElementById("letters-already-guessed")
+lettersGuessed.textContent = wrongLetters
+
 };
+
+
 
 gameStart();
 
