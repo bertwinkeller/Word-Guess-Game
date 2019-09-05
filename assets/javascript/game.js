@@ -115,6 +115,7 @@ wins++;
 var winsText = document.getElementById('wins-text');
 winsText.textContent = "Wins: " + wins;
 playMedia();
+window.alert('You Guessed it correctly!');
 gameStart();
     }else if(remainingGuesses === 0){
 losses++;
@@ -132,6 +133,3 @@ document.onkeypress = function(event) {
     checkLetter(userGuess);
     loopGame();
         };
-
-
-    
