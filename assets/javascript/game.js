@@ -83,6 +83,28 @@ lettersGuessed.textContent = "Letters already guessed: " + wrongLetters
 
 };
 
+function playMedia() {
+    if(chosenArtist==='notoriousbig'){
+document.getElementById('image').src = "./assets/images/notorious.jpg";
+    }else if(chosenArtist==='tupac'){
+document.getElementById('image').src = "./assets/images/tupac.jpeg";
+    }else if(chosenArtist==='mobbdeep'){
+document.getElementById('image').src = "./assets/images/mobbdeep.jpg";
+    }else if(chosenArtist==='eminem'){
+document.getElementById('image').src = "./assets/images/eminem.jpg";
+    }else if(chosenArtist==='tribecalledquest'){
+document.getElementById('image').src = "./assets/images/tcq.jpg"; 
+    }else if(chosenArtist==='snoopdogg'){
+document.getElementById('image').src = "./assets/images/snoop.jpg";
+    }else if(chosenArtist==='gangstarr'){
+document.getElementById('image').src = "./assets/images/gangstarr.jpeg";
+    }else if(chosenArtist==='wutangclan'){
+document.getElementById('image').src = "./assets/images/wutang.jpeg";
+    }
+    
+    };
+    
+    
 
 
 function loopGame() {
@@ -92,6 +114,7 @@ function loopGame() {
 wins++;
 var winsText = document.getElementById('wins-text');
 winsText.textContent = "Wins: " + wins;
+playMedia();
 gameStart();
     }else if(remainingGuesses === 0){
 losses++;
@@ -100,8 +123,6 @@ lossesText.textContent = "Losses: " + losses;
 gameStart();
     }
 };
-
-
 
 
 gameStart();
